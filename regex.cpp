@@ -9,6 +9,6 @@ int main() {
     if (regex_match(str, pattern))
         cout << "Valid" << endl;
     else
-        cout << "Invalid op" << endl;
+        cout << "Invalid op " << endl;
     return 0;
 }
