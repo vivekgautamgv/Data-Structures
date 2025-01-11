@@ -1,9 +1,9 @@
-public class stack {
+public class Stack {
     private int maxSize;
     private int[] stackArray;
     private int top;
 
-    public stack(int size) {
+    public Stack(int size) {
         this.maxSize = size;
         this.stackArray = new int[maxSize];
         this.top = -1;
@@ -44,7 +44,7 @@ public class stack {
     }
 
     public static void main(String[] args) {
-        stack stack = new stack(5);
+        Stack stack = new Stack(5);
         stack.push(10);
         stack.push(20);
         stack.push(30);
