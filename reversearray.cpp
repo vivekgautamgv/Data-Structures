@@ -11,7 +11,7 @@ int main() {
     int n = 6;
     int a[6] = {19, 10, 8, 17, 9, 15};
 
-    cout << "Original array :  ";
+    cout << "Original array :";
     
     for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
