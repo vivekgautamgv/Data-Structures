@@ -64,3 +64,17 @@ void isFull() {
 void size() {
     return size;
 }   
+void clear() {
+    front = rear = -1;
+    size = 0;
+}
+
+void print() {
+    if (isEmpty()) {
+        System.out.println("Queue is empty");
+        return;
+    }
+    for (int i = 0; i < size; i++) {
+        System.out.println(array[(front + i) % capacity]);
+    }
+}
