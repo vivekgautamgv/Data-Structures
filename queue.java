@@ -50,3 +50,13 @@ void peek() {
     }
     return array[front];
 }
+
+
+void isEmpty() {
+    return size == 0;
+}
+
+void isFull() {
+    return size == capacity;
+    
+}
