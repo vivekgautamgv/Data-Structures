@@ -42,3 +42,11 @@ void dequeue() {
     System.out.println(value + " dequeued from queue");
     return value;
 }
+
+void peek() {
+    if (isEmpty()) {
+        System.out.println("Queue is empty");
+        return;
+    }
+    return array[front];
+}
