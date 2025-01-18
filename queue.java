@@ -30,3 +30,15 @@ void queue(int value) {
     size++;
     System.out.println(value + " enqueued to queue");
 }
+
+void dequeue() {
+    if (isEmpty()) {
+        System.out.println("Queue is empty");
+        return;
+    }
+    int value = array[front];
+    front = (front + 1) % capacity;
+    size--;
+    System.out.println(value + " dequeued from queue");
+    return value;
+}
