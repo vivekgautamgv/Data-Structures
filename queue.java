@@ -58,5 +58,9 @@ void isEmpty() {
 
 void isFull() {
     return size == capacity;
-    
+
 }
+
+void size() {
+    return size;
+}   
