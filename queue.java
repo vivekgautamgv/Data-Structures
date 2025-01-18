@@ -19,3 +19,14 @@ public class queue {
     }
 }
 
+
+void queue(int value) {
+    if (isFull()) {
+        System.out.println("Queue is full");
+        return;
+    }
+    rear = (rear + 1) % capacity;
+    array[rear] = value;
+    size++;
+    System.out.println(value + " enqueued to queue");
+}
