@@ -44,7 +44,7 @@ public class stack {
     }
 
     public static void main(String[] args) {
-        stack stack = new Stack(5);
+        stack stack = new stack(5);
         stack.push(10);
         stack.push(20);
         stack.push(30);
