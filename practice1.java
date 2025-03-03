@@ -2,13 +2,16 @@ import java.util.*;
 
 public class practice1 {
     public static void main(String[] args) {
-
-        System.out.println("hi");
-
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        String name  = "Vivek";
+        String name2 = "Gagam";
+        int age = 30;
+        int age2 = 25;
+   
+        System.out.println("Hello World");
+        System.out.println("My name is " + name + " and I am " + age + " years old.");
+        System.out.println("My name is " + name2 + " and I am " + age2 + " years old.");
         
-        System.out.println(n);
+        
     }
 
 }
