@@ -325,26 +325,27 @@ import java.util.Scanner;
 // }
 
 
-public class Javasts{
-     
+import java.util.Stack;
 
-    public static void main(String[] args){
-     int[] arr = {1,2,3,4,4,5,6};
-     int size = arr.length;
-     int target= 4;
-     int count=0;
-    Stack<Integer> s = new Stack<>();
-    s.push(6);
-    s.push(570);
-    System.out.println(s);
-     for(int i=0; i<size;i++){
-        if (arr[i] <= target){
-            count++;
-        }else{
-            break;
+public class Javasts {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 4, 5, 6};
+        int size = arr.length;
+        int target = 4;
+        int count = 0;
+
+        Stack<Integer> s = new Stack<>();
+        s.push(6);
+        s.push(570);
+        System.out.println(s);
+
+        for (int i = 0; i < size; i++) {
+            if (arr[i] <= target) {
+                count++;
+            } else {
+                break;
+            }
         }
-    }
-    System.out.println("Count: " + count);
-
+        System.out.println("Count: " + count);
     }
 }
