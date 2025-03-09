@@ -379,31 +379,62 @@ import java.util.Scanner;
 //         }
 //     }
 // }
-import java.util.Scanner;
+// import java.util.Scanner;
+
+// public class Javasts {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a string: ");
+//         String is = sc.nextLine();
+//         sc.close();
+
+//         if (validstr(is)) {
+//             System.out.println("The string is valid.");
+//         } else {
+//             System.out.println("The string is not valid.");
+//         }
+//     }
+
+//     private static boolean validstr(String s) {
+//         if (s.isEmpty()) {
+//             return false;
+//         }
+//         if (s.charAt(0) == 'a') {
+//             if (s.length() >= 3 && s.substring(1, 3).equals("bb")) {
+//                 return true;
+//             } else {
+//                 return validstr(s.substring(1));
+//             }
+//         }
+//         return false;
+//     }
+// }
+
+import java.util.*;
 
 public class Javasts {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a string: ");
-        String is = sc.nextLine();
-        sc.close();
+        int[] arr = {1, 2, 4, 5, 5, 6, 7, 8};
+        int tar = 15; // Example target sum
 
-        if (validstr(is)) {
-            System.out.println("The string is valid.");
+        if (findTriplet(arr, tar)) {
+            System.out.println("Triplet found.");
         } else {
-            System.out.println("The string is not valid.");
+            System.out.println("No triplet found.");
         }
     }
 
-    private static boolean validstr(String s) {
-        if (s.isEmpty()) {
-            return false;
-        }
-        if (s.charAt(0) == 'a') {
-            if (s.length() >= 3 && s.substring(1, 3).equals("bb")) {
-                return true;
-            } else {
-                return validstr(s.substring(1));
+    private static boolean findTriplet(int[] arr, int tar) {
+        int n = arr.length;
+
+        for (int i = 0; i < n - 2; i++) {
+            for (int j = i + 1; j < n - 1; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (arr[i] + arr[j] + arr[k] == tar) {
+                        return true;
+                    }
+                }
             }
         }
         return false;
