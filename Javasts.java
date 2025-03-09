@@ -354,28 +354,58 @@ import java.util.Scanner;
 //     }
 // }
 // }
+// import java.util.Scanner;
+
+// public class Javasts {
+//     public static void main(String[] args) {
+//         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+//         int n = arr.length;
+
+//         int[] result = new int[n];
+//         int evenIndex = 0;
+//         int oddIndex = n - 1;
+
+//         for (int i = 0; i < n; i++) {
+//             if (arr[i] % 2 == 0) {
+//                 result[evenIndex++] = arr[i];
+//             } else {
+//                 result[oddIndex--] = arr[i];
+//             }
+//         }
+
+//         // Print the modified array
+//         for (int i = 0; i < n; i++) {
+//             System.out.print(result[i] + " ");
+//         }
+//     }
+// }
 import java.util.Scanner;
 
 public class Javasts {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
-        int n = arr.length;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String is = sc.nextLine();
+        sc.close();
 
-        int[] result = new int[n];
-        int evenIndex = 0;
-        int oddIndex = n - 1;
+        if (validstr(is)) {
+            System.out.println("The string is valid.");
+        } else {
+            System.out.println("The string is not valid.");
+        }
+    }
 
-        for (int i = 0; i < n; i++) {
-            if (arr[i] % 2 == 0) {
-                result[evenIndex++] = arr[i];
+    private static boolean validstr(String s) {
+        if (s.isEmpty()) {
+            return false;
+        }
+        if (s.charAt(0) == 'a') {
+            if (s.length() >= 3 && s.substring(1, 3).equals("bb")) {
+                return true;
             } else {
-                result[oddIndex--] = arr[i];
+                return validstr(s.substring(1));
             }
         }
-
-        // Print the modified array
-        for (int i = 0; i < n; i++) {
-            System.out.print(result[i] + " ");
-        }
+        return false;
     }
 }
