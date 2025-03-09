@@ -19,4 +19,7 @@ class TreeNode {
     }
 }
 
-public class PreorderTraversal(TreeNode root)
+public class PreorderTraversal
+{
+    
+}
