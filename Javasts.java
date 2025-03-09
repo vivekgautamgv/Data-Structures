@@ -325,27 +325,57 @@ import java.util.Scanner;
 // }
 
 
-import java.util.Stack;
+// import java.util.Stack;
+
+// public class Javasts {
+//     public static void main(String[] args) {
+//         Scanner sc= new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int[] arr = {1,2,3,4,5,6,7,8};
+//         int m = 4;
+
+//         for(int i = 0;i<=8;i++){
+//             if(arr[i]%2 == 0){
+//                 for(int j = 0;j<m;j++){
+//                     arr[i] = arr[j];
+//                 }        
+//         }
+
+//         else {
+//             for(int k=0; k>4 && k<=8){
+//                 arr[i] = arr[k];
+//             }
+//         }
+
+
+//         //Scanner sc= new Scanner(System.in);       
+
+       
+//     }
+// }
+// }
+import java.util.Scanner;
 
 public class Javasts {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 4, 5, 6};
-        int size = arr.length;
-        int target = 4;
-        int count = 0;
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int n = arr.length;
 
-        Stack<Integer> s = new Stack<>();
-        s.push(6);
-        s.push(570);
-        System.out.println(s);
+        int[] result = new int[n];
+        int evenIndex = 0;
+        int oddIndex = n - 1;
 
-        for (int i = 0; i < size; i++) {
-            if (arr[i] <= target) {
-                count++;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0) {
+                result[evenIndex++] = arr[i];
             } else {
-                break;
+                result[oddIndex--] = arr[i];
             }
         }
-        System.out.println("Count: " + count);
+
+        // Print the modified array
+        for (int i = 0; i < n; i++) {
+            System.out.print(result[i] + " ");
+        }
     }
 }
