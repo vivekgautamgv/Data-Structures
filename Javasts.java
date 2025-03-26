@@ -465,11 +465,15 @@ class Javasts{
         int size = sc.nextInt();
         int[] arr = new int[size];
 
-        for(int i=0;i<n;i++){
+        for(int i=0;i<size;i++){
             arr[i] = sc.nextInt();
         }
 
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
+
+        int max = Arrays.stream(arr).max().getAsInt();
+        System.out.println(max);
     }
 }
+
