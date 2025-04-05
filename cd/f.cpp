@@ -1,14 +1,21 @@
-#include<iostream>
-#include<regex>
-#include<string>
+#include <iostream>
+#include <string>
+
 using namespace std;
 
-
-bool isValidString(string s) {
-    
+// Function to check if a string starts with 'x' and ends with 'y'
+bool isValidString(const string& str) {
+    if (str.length() < 2) return false; // minimum length for valid string
+    if (str[0] == 'x' && str[str.length() - 1] == 'y') {
+        for (char ch : str) {
+            if (ch != 'x' && ch != 'y') {
+                return false; // invalid character
+            }
+        }
+        return true;
+    }
+    return false;
 }
-
-
 
 int main() {
     string input;
