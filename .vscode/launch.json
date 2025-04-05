@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "euclid",
+            "request": "launch",
+            "mainClass": "euclid",
+            "projectName": "Data Structures_3b06ea1c"
+        },
+        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
@@ -24,7 +31,5 @@
                 }
             ]
         }
-
-
     ]
 }
