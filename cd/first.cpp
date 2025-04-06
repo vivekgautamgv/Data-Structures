@@ -16,7 +16,7 @@ bool isTerminal(const string& symbol) {
 
 // Compute FIRST of a non-terminal
 void computeFirst(const string& symbol) {
-    if (!first[symbol].empty()) return;
+    //if (!first[symbol].empty()) return;
 
     for (auto prod : grammar[symbol]) {
         bool epsilonPossible = true;
@@ -44,13 +44,7 @@ void computeFirst(const string& symbol) {
 }
 
 int main() {
-    // Grammar:
-    // E  → T E'
-    // E' → + T E' | ε
-    // T  → F T'
-    // T' → * F T' | ε
-    // F  → ( E ) | id
-
+ 
     grammar["E"]  = { {"T", "E'"} };
     grammar["E'"] = { {"+", "T", "E'"}, {"ε"} };
     grammar["T"]  = { {"F", "T'"} };
