@@ -8,7 +8,7 @@ public:
     std::string value;
     std::shared_ptr<Node> left;
     std::shared_ptr<Node> right;
-
+    /**/
     Node(std::string val, std::shared_ptr<Node> l = nullptr,
          std::shared_ptr<Node> r = nullptr)
         : value(val), left(l), right(r) {}
