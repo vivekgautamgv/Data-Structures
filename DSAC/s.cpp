@@ -16,7 +16,7 @@ void vectorpair()
         cout<<x<<" ";
     }   
 
-    cout<<"\n"<<j.size()<<endl;
+
 
 }
 
