@@ -47,7 +47,7 @@ int main(){
     st();
     cout<<"\n"<<endl;
     deq();
-    cout<<"\n"<<endl;
+
     vectorpair();
     return 0;
 }
