@@ -24,7 +24,7 @@ int main(){
     root->right = new Node(3);
     root->left->left = new Node(4);
     root->left->right = new Node(0);
-    cout << "Binary tree created successfully." << endl;
+    cout << "Binarytree created successfully." << endl;
     preorder(root);
     cout << endl;
 
